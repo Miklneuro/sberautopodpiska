@@ -71,12 +71,13 @@ ________________________________________
 Для  проверки резултатата:
 
 * создайте  папку проекта  например test
-* сохраните файлы best_CatBoost_full.pkl, pred2.csv, test_predict.py, requirements.txt, в созданную  папку  проекта
+* сохраните файлы best_CatBoost_full.pkl, pred2.csv, test_predict.py, api.py, requirements.txt, в созданную  папку  проекта
 * создайте в папке  новое виртуально окружение (Испытано  на версиях 3.10 и 3.12.9)
 * активируйте виртуально окружение
 * установите зависимости 
+* в качестве альтернативы установке  установить pip install pandas joblib fastapi catboost
 
-* запустите исполняемый файл test_predict.py
+* запустите исполняемый файл test_predict.py Данный фал исполняется как самостоятельно так и вместе с API
 Ниже  пример создания виртуальног окружения  на Windos 10  в  среде PyCharm Community Edition 2024.2.4
 
 PS D:\Hakaton_sberauto> python -m venv D:\Hakaton_sberauto\test\venv
@@ -88,3 +89,14 @@ PS D:\Hakaton_sberauto> D:\Hakaton_sberauto\test\venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 python test_predict.py
 
+Варинат запуска Fast API тот же  результат - предсказания в виде  0 или 1, но в браузере.
+Для  запуска:
+* актвируй  виртуальное  окружение
+venv/Scripts/activate
+* находясь в папке  проекта и в активном виртуально окружении выполните в комментдной строке терминала 
+uvicorn api:app --port 5000 --reload
+* в  браузере при  запущеном Fast API откройте сылку
+http://127.0.0.1:5000/run-test-predict
+
+* Открытие Swagger UI
+ http://127.0.0.1:5000/docs
