@@ -1,7 +1,7 @@
 ![изображение](https://github.com/user-attachments/assets/9167b267-5441-46e8-b2c3-189efa005c36)
 
 
-Комманда ML_RUSTlers:
+## Комманда ML_RUSTlers:
 
 Даминов Артур, Ковалева Екатерина, Медведев Игорь
 
